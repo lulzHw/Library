@@ -1,13 +1,9 @@
-import com.*;
+package com;
 
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        librarian();
-    }
-
-    private static void librarian() {
+public class Librarian {
+    public static void work() {
         Library library = initializeLibrary();
         DateFormat dateFormat = null;
         String author = null;
@@ -23,6 +19,7 @@ public class Main {
             switch (userChoice) {
                 case 0:
                     System.out.println("Работа завершена.");
+                    scanner.close();
                     return;
                 case 1:
                     library.print();
